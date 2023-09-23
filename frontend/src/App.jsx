@@ -8,6 +8,7 @@ import Fleet from "./pages/Fleet";
 import Admin from "./pages/Admin";
 import { UserContext } from "./context/UserContext";
 import { useState } from "react";
+import TransactionHistory from "./pages/TransactionHistory";
 
 function App() {
   const [token, setToken] = useState();
@@ -22,7 +23,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/book" element={<Book />} />
           <Route path="/model" element={<Fleet />} />
-          <Route path="/admin" element={ <Admin /> } />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/profil" element={<TransactionHistory />} />
         </Routes>
       </UserContext.Provider>
     </>

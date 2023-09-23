@@ -44,12 +44,8 @@ const FormBooking = () => {
   }, [carId]);
 
   const handleSearch = (e) => {
-    const decode = jwt_decode(token);
-
-    setName(decode.name);
-    setEmail(decode.email);
-
     e.preventDefault();
+    
     if (token === undefined) {
       Swal.fire({
         title: "You have to login to book a car!",
@@ -64,6 +60,10 @@ const FormBooking = () => {
           navigate("/login");
         }
       });
+    const decode = jwt_decode(token);
+
+    setName(decode.name);
+    setEmail(decode.email);
     } else {
       props.setOpenModal("default");
     }

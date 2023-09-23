@@ -26,8 +26,8 @@ function VehicleModels() {
   };
 
   return (
-    <section id="vehicle-models" className="bg-primary pt-6 pb-16">
-      <div className="flex flex-col items-center text-white gap-2 mb-10">
+    <section id="vehicle-models" className="bg-primary pt-8 pb-12 lg:h-[90%]">
+      <div className="flex flex-col items-center text-white gap-2 mb-20">
         <p className="text-2xl">Vehicle Models</p>
         <h1 className="text-4xl font-medium">Our Rental Fleet</h1>
         <h3 className="w-96 text-center">
@@ -35,9 +35,9 @@ function VehicleModels() {
         </h3>
       </div>
 
-      <div className="w-[75%] mx-auto flex justify-center min-[1300px]:justify-between flex-wrap gap-12 lg:gap-20">
-        <div className="flex flex-col justify-between">
-          <ul className="w-full lg:w-auto flex-1 min-[1300px]:flex-grow-0 text-xl font-medium flex flex-col gap-2">
+      <div className="w-[90%] lg:w-[80%] mx-auto flex justify-between flex-wrap gap-12 lg:gap-16">
+        <div className="w-full min-[800px]:w-1/3 lg:w-80 min-[1300px]:w-52 flex flex-col justify-between gap-2">
+          <ul className="text-xl font-medium flex flex-col gap-2">
             {cars?.map((car, index) => (
               <li
                 key={index}
@@ -51,15 +51,15 @@ function VehicleModels() {
           </ul>
 
           <Link to="/book">
-            <button className="text-white py-3 px-4 bg-black rounded shadow- shadow-slate-400 hover:brightness-90">
+            <button className="w-full text-white py-3 px-4 bg-black rounded shadow-slate-400 hover:brightness-90">
               Book Now
             </button>
           </Link>
         </div>
 
-        <>
+        <div className="w-full min-[800px]:w-auto flex justify-center">
           <img
-            className="h-64"
+            className="w-72 h-auto md:h-64 md:w-auto"
             src={
               currentCar === 0
                 ? innova
@@ -73,9 +73,9 @@ function VehicleModels() {
             }
             alt=""
           />
-        </>
+        </div>
 
-        <div className="flex flex-col w-[90%] min-[1300px]:w-auto">
+        <div className="w-full flex flex-1 min-[1300px]:flex-grow-0 flex-col">
           <>
             <div className="h-14 min-[850px]:h-12 px-28 sm:px-40 min-[850px]:px-0 flex items-center justify-center bg-black text-white text-4xl min-[850px]:text-2xl font-bold">
               RP&nbsp;
